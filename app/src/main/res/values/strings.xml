@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">EDU Portal</string>
+
+    <string-array name="grades_array">
+        <item>4.00 (A)</item>
+        <item>3.70 (A-)</item>
+        <item>3.30 (B+)</item>
+        <item>3.00 (B)</item>
+        <item>2.70 (B-)</item>
+        <item>2.30 (C+)</item>
+        <item>2.00 (C)</item>
+        <item>1.70 (C-)</item>
+        <item>1.00 (D)</item>
+        <item>0.00 (F)</item>
+    </string-array>
+</resources>

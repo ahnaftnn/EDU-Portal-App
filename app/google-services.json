@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "303358710133",
+    "project_id": "edu-portal-f4847",
+    "storage_bucket": "edu-portal-f4847.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303358710133:android:0cd8587746e031c1f4033c",
+        "android_client_info": {
+          "package_name": "com.ahnaftn.eduportal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4yAmCbO8tlYzr1phyDnG_Rq9rZNyYm0E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
