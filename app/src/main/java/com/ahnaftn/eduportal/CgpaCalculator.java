@@ -118,12 +118,12 @@ public class CgpaCalculator extends AppCompatActivity {
                 LinearLayout.LayoutParams.WRAP_CONTENT));
         newRow.setOrientation(LinearLayout.HORIZONTAL);
         newRow.setGravity(Gravity.CENTER);
-        newRow.setWeightSum(3);
-        newRow.setPadding(0, 0, 0, 24);
+        newRow.setWeightSum(4);
+        newRow.setPadding(0, 0, 0, 20);
 
         // Create Course Code EditText
         EditText courseCode = new EditText(this);
-        courseCode.setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1));
+        courseCode.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT,1));
         courseCode.setHint("Course Code");
         courseCode.setBackground(getResources().getDrawable(R.drawable.input_field_bg));
         courseCode.setPadding(10, 10, 10, 10);
@@ -131,7 +131,7 @@ public class CgpaCalculator extends AppCompatActivity {
 
         // Create Grade Spinner
         Spinner gradeSpinner = new Spinner(this);
-        LinearLayout.LayoutParams spinnerParams = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1);
+        LinearLayout.LayoutParams spinnerParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT,1);
         spinnerParams.setMargins(8, 0, 8, 0);
         gradeSpinner.setLayoutParams(spinnerParams);
         gradeSpinner.setBackground(getResources().getDrawable(R.drawable.input_field_bg));
@@ -143,17 +143,34 @@ public class CgpaCalculator extends AppCompatActivity {
 
         // Create Credit EditText
         EditText credit = new EditText(this);
-        credit.setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1));
+        credit.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT,1));
         credit.setHint("Credit");
         credit.setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
         credit.setBackground(getResources().getDrawable(R.drawable.input_field_bg));
         credit.setPadding(10, 10, 10, 10);
         credit.setTextColor(Color.BLACK);
 
+        Button deleteBtn = new Button(this);
+        LinearLayout.LayoutParams deleteParams = new LinearLayout.LayoutParams(0,ViewGroup.LayoutParams.WRAP_CONTENT,1);
+        deleteBtn.setLayoutParams(deleteParams);
+        deleteBtn.setText("❌");
+        deleteBtn.setTextSize(14);
+        deleteBtn.setBackgroundColor(Color.TRANSPARENT);
+        deleteBtn.setTextColor(Color.RED);
+
+        // Delete row on click
+        deleteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resultContainer.removeView(newRow);
+            }
+            });
+
         // Add all views to the new row
         newRow.addView(courseCode);
         newRow.addView(gradeSpinner);
         newRow.addView(credit);
+        newRow.addView(deleteBtn);
 
         // Add the new row to the course container
         resultContainer.addView(newRow);
