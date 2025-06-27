@@ -1,35 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/maroon"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="end">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="80dp"
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/logout_button"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
-            android:text="LogOut"
-            android:textColor="@color/maroon" />
-        <TextView
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/profile" />
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/sid"
-            android:textColor="@color/white"/>
+            android:orientation="vertical"
+            android:layout_gravity="center">
+          <TextView
+              android:id="@+id/name_edit"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:textSize="25sp"
+              android:textStyle="bold" />
 
+          <TextView
+              android:id="@+id/sid"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:textSize="25sp" />
+
+          <TextView
+              android:id="@+id/dept_edit"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:textSize="25sp" />
+        </LinearLayout>
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="5dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
+        <LinearLayout
+            android:layout_width="158.7dp"
+            android:layout_height="130dp"
+            android:layout_margin="7dp"
+            android:layout_weight="1"
+            android:background="@drawable/maroon_card_bg"
+            android:orientation="vertical">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:text="2.45"
+                android:textColor="@color/white"
+                android:textSize="35sp"
+                android:textStyle="bold" />
 
-</LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/white_card_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Current CGPA "
+                    android:textColor="@color/maroon"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="158.7dp"
+            android:layout_height="130dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/maroon_card_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:text="20000"
+                android:textColor="@color/white"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/white_card_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=" Remaining Balance "
+                    android:textColor="@color/maroon"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="0dp"
+        android:background="@color/maroon"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <ImageView
+            android:id="@+id/home_button"
+            android:layout_width="wrap_content"
+            android:layout_height="100px"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:src="@drawable/home_white" />
+
+        <ImageView
+            android:id="@+id/cgpa_button"
+            android:layout_width="wrap_content"
+            android:layout_height="100px"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:src="@drawable/calc_white" />
+
+        <ImageView
+            android:id="@+id/schedule_button"
+            android:layout_width="wrap_content"
+            android:layout_height="100px"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/calendar" />
+
+        <ImageView
+            android:id="@+id/edit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="100px"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/menu" />
+        <ImageView
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="100px"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/logout" />
+
+    </LinearLayout>
+</RelativeLayout>
