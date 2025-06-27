@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/maroon"
+    tools:context=".SearchRoutineActivity">
+
+    <EditText
+        android:id="@+id/courseCodeInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Course Code (e.g. CSE 327.4)"
+        android:inputType="text"
+        android:background="@android:drawable/edit_text"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textColorHint="#999999"
+        android:layout_marginBottom="12dp" />
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search Routine"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/routineResultRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/maroon"/>
+
+</LinearLayout>

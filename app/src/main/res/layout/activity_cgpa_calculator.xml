@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/maroon"
+    android:background="@drawable/bg2"
     android:padding="16dp"
     tools:context=".CgpaCalculator">
 
@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CGPA Calculator"
-            android:textColor="@color/white"
+            android:textColor="@color/maroon"
             android:textSize="26sp"
             android:textStyle="bold"
             android:layout_marginTop="32dp"/>
@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Calculate your CGPA\nKnow your academic progress"
-            android:textColor="@color/white"
+            android:textColor="@color/maroon"
             android:textSize="16sp"
             android:gravity="center"
             android:layout_marginBottom="32dp"/>
