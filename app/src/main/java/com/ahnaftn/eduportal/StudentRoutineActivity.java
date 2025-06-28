@@ -55,6 +55,7 @@ public class StudentRoutineActivity extends AppCompatActivity {
     }
 
     private void copyDatabaseIfNeeded() {
+        //git push er jonno
         File dbFile = new File(dbPath);
         if (!dbFile.exists()) {
             try {
