@@ -26,6 +26,7 @@
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:src="@drawable/profile" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -72,17 +73,17 @@
         <LinearLayout
             android:layout_width="158.7dp"
             android:layout_height="130dp"
-            android:layout_margin="7dp"
+            android:layout_margin="8dp"
             android:layout_weight="1"
             android:background="@drawable/maroon_card_bg"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/cg_edit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
-                android:text="2.45"
                 android:textColor="@color/white"
                 android:textSize="35sp"
                 android:textStyle="bold" />
@@ -92,6 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
+                android:padding="2dp"
                 android:background="@drawable/white_card_bg">
 
                 <TextView
@@ -107,7 +109,7 @@
         <LinearLayout
             android:layout_width="158.7dp"
             android:layout_height="130dp"
-            android:layout_margin="10dp"
+            android:layout_margin="8dp"
             android:layout_weight="1"
             android:background="@drawable/maroon_card_bg"
             android:orientation="vertical">
@@ -127,6 +129,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
+                android:padding="2dp"
                 android:background="@drawable/white_card_bg">
 
                 <TextView
@@ -154,7 +157,7 @@
         android:background="@color/maroon"
         android:gravity="center"
         android:orientation="horizontal"
-        android:weightSum="5">
+        android:weightSum="4">
 
         <ImageView
             android:id="@+id/home_button"
@@ -181,19 +184,12 @@
             android:src="@drawable/calendar" />
 
         <ImageView
-            android:id="@+id/edit_button"
+            android:id="@+id/menu_button"
             android:layout_width="wrap_content"
             android:layout_height="100px"
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:src="@drawable/menu" />
-        <ImageView
-            android:id="@+id/logout_button"
-            android:layout_width="wrap_content"
-            android:layout_height="100px"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:src="@drawable/logout" />
 
     </LinearLayout>
 </RelativeLayout>

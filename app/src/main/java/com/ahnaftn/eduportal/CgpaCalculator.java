@@ -104,6 +104,7 @@ public class CgpaCalculator extends AppCompatActivity {
                 }
 
                 cgpa = (cr_sum == 0) ? 0 : (grcr_sum / cr_sum);
+                cgEdit.setTextColor(Color.parseColor("#6A0032"));
                 cgEdit.setText("Total CGPA : "+new DecimalFormat("##.##").format(cgpa));
             }
         });
@@ -127,12 +128,14 @@ public class CgpaCalculator extends AppCompatActivity {
         courseCode.setHint("Course Code");
         courseCode.setBackground(getResources().getDrawable(R.drawable.input_field_bg));
         courseCode.setPadding(10, 10, 10, 10);
-        courseCode.setTextColor(Color.BLACK);
+        courseCode.setTextColor(Color.parseColor("#6A0032"));
+        courseCode.setHintTextColor(Color.parseColor("#6A0032"));
 
         // Create Grade Spinner
         Spinner gradeSpinner = new Spinner(this);
         LinearLayout.LayoutParams spinnerParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT,1);
         spinnerParams.setMargins(8, 0, 8, 0);
+        gradeSpinner.setPadding(10,10,10,10);
         gradeSpinner.setLayoutParams(spinnerParams);
         gradeSpinner.setBackground(getResources().getDrawable(R.drawable.input_field_bg));
 
@@ -148,7 +151,8 @@ public class CgpaCalculator extends AppCompatActivity {
         credit.setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
         credit.setBackground(getResources().getDrawable(R.drawable.input_field_bg));
         credit.setPadding(10, 10, 10, 10);
-        credit.setTextColor(Color.BLACK);
+        credit.setTextColor(R.color.maroon);
+        credit.setHintTextColor(R.color.maroon);
 
         Button deleteBtn = new Button(this);
         LinearLayout.LayoutParams deleteParams = new LinearLayout.LayoutParams(0,ViewGroup.LayoutParams.WRAP_CONTENT,1);

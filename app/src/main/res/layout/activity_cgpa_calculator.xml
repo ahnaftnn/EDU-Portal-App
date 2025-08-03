@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg2"
+    android:background="@color/white"
     android:padding="16dp"
     tools:context=".CgpaCalculator">
 
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="20dp"
-            android:background="@drawable/white_card_bg"
+            android:background="@drawable/maroon_card_bg"
             android:orientation="vertical"
             android:elevation="8dp">
 
@@ -55,6 +55,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="Course Code"
+                    android:textColorHint="@color/maroon"
                     android:padding="10dp"
                     android:background="@drawable/input_field_bg"
                     android:textColor="@color/maroon"/>
@@ -63,6 +64,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:textColorHint="@color/maroon"
+                    android:padding="10dp"
+                    android:popupBackground="@drawable/white_card_bg"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
                     android:background="@drawable/input_field_bg" />
@@ -71,6 +75,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="Credit"
+                    android:textColorHint="@color/maroon"
                     android:inputType="numberDecimal"
                     android:padding="10dp"
                     android:background="@drawable/input_field_bg"
@@ -86,10 +91,10 @@
                 android:id="@+id/add_more_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="@color/maroon"
                 android:text="ADD MORE"
                 android:layout_gravity="center"
-                android:textColor="@color/maroon"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:layout_marginBottom="12dp"/>
 
@@ -97,10 +102,10 @@
                 android:id="@+id/submit_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="@color/maroon"
                 android:text="SUBMIT"
                 android:layout_gravity="center"
-                android:textColor="@color/maroon"
+                android:textColor="@color/white"
                 android:textStyle="bold"/>
         </LinearLayout>
         <LinearLayout

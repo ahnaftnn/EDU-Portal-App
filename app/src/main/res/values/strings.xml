@@ -13,4 +13,10 @@
         <item>1.00 (D)</item>
         <item>0.00 (F)</item>
     </string-array>
+
+    <string-array name="role_array">
+        <item>Student</item>
+        <item>Advisor</item>
+        <item>Instructor</item>
+    </string-array>
 </resources>
